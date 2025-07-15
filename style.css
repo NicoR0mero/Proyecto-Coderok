@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: gold;
+  font-size: 50px;
+  text-align: center;
+}
+
+/* -----------------MODELADO DE PAGINA COMPLETA---------------------- */
+
+.Pagina-Completa {
+  display: grid;
+  grid-template-areas:
+    "espacio1"
+    "espacio2"
+    "espacio3";
+  min-height: 100vh;
+}
+
+header {
+  grid-area: espacio1;
+  background-color: #d69846;
+}
+main {
+  grid-area: espacio2;
+}
+footer {
+  grid-area: espacio3;
+}
+body {
+  background-color: #d69846 !important;
+  font-family: "Playfair Display", serif;
+  color: #333;
+  line-height: 1.6;
+}
+section {
+  background-color: transparent;
+}
+
+/* INDEX */
+
+.inicio {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+.fundador {
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: underline;
+}
+
+.fotoprincipal {
+  width: 400px;
+  height: 300px;
+}
+/* TITULO PRINCIPAL DE LA PAGINA */
+.TITULOPRINCIPAL {
+  font-family: "Times New Roman", Times, serif;
+  color: burlywood;
+  background-color: wheat;
+}
+
+/* Foto fundador */
+.fotoprincipal {
+  padding: 10px;
+}
+
+/* titulo de fundador */
+.fundador {
+  padding: 10px;
+}
+
+/* nuestro inicio */
+.inicio {
+  padding: 10px;
+}
+.texto-inicio {
+  padding: 10px;
+}
+
+/* modificando el fundador1 */
+.fundador1 {
+  padding: 10px;
+}
+/*------------------ termina INDEX ---------------------- */
+
+/* ----------- CONTENIDO DE FOOTER ----------------- */
+footer {
+  background-color: #e8e4d9;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  color: #666;
+  margin-top: 60px;
+  border-top: 2px solid #d6cfc2;
+  margin-bottom: auto;
+}
+
+/* LOGO FOOTER */
+.foto-ig {
+  width: 15px;
+}
+
+.foto-oulook {
+  width: 15px;
+}
+/*--------- TERMINA CONTENIDO DE FOOTER ----------- */
+
+/* ------------ COMIENZO DE HISTORIA ------------ */
+
+.Elcomienzo1 {
+  color: black;
+  font-size: 45px;
+  font-family: "Playfair Display", serif;
+  text-align: left;
+  letter-spacing: 2px;
+  padding: 30px 15px;
+}
+
+.Texto1 {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.crecimiento1 {
+  color: black;
+  font-size: 45px;
+  font-family: "Playfair Display", serif;
+  text-align: left;
+  letter-spacing: 2px;
+  padding: 30px 15px;
+}
+
+.desarrollo1 {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  padding: 0px;
+}
+
+.dosdecadas {
+  color: black;
+  font-size: 45px;
+  font-family: "Playfair Display", serif;
+  text-align: left;
+  letter-spacing: 2px;
+  padding: 30px 15px;
+}
+
+.text-dosdecadas {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 20px;
+}
+.comedor {
+  max-width: 100%;
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in-out;
+  padding: 20px;
+}
+.desarrollo1 {
+  padding: 20px;
+}
+
+/* -------------------- TERMINA HISTORIA ------------------- */
+
+/* --------------------- ARRANCA MENU --------------------- */
+
+/* Título principal del menú */
+.menuprincipal {
+  font-size: 40px;
+  color: #8b5e3c;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #c1a57b;
+  padding-bottom: 10px;
+}
+
+/* Lista general */
+.lista {
+  max-width: 900px;
+  margin: auto;
+  list-style-type: none;
+}
+
+.list-food {
+  list-style-type: none;
+}
+
+/* Ítems del menú */
+.lista li {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.lista h2 {
+  font-size: 22px;
+  color: #8b5e3c;
+  margin-bottom: 10px;
+}
+
+.lista p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.comida1,
+.comida3 {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.comida1:hover,
+.comida2:hover,
+.comida3:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .menuprincipal {
+    font-size: 26px;
+  }
+
+  .lista li {
+    padding: 15px;
+  }
+
+  .lista h2 {
+    font-size: 18px;
+  }
+}
+
+/* ------lista de menu ------ */
+
+.list {
+  grid: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+/*----------------- TERMINA MENÚ ----------------- */
+
+/* -------------- EMPIEZA CONTACTO ---------------- */
+.card-body i {
+  transition: transform 0.3s ease;
+}
+.card-body:hover i {
+  transform: scale(1.2);
+}
+
+/* ------------- TERMINA CONTACTO ------------------ */
+
+/* -------------- MEMBRESIA DE LA CASA ------------ */
+
+.promo {
+  background-color: #ebc67c;
+  padding: 30px;
+  border-top: 1px solid #ddd;
+}
+.promo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.promo li {
+  margin-bottom: 15px;
+  font-size: 17px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.membresiavip {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f4e9dc;
+  border-bottom: 2px solid #c1a57b;
+}
+
+.membresiavip h1 {
+  font-size: 32px;
+  color: #8b5e3c;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.membresiavip p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.formulario-membresia {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+}
+
+.elemento-formulario label {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: medium;
+  padding: 10px;
+}
+
+.elemento-formulario input {
+  padding: 10px;
+  border-color: 1px #ebc67c;
+  font-size: 1rem;
+}
+
+.elemento-formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
