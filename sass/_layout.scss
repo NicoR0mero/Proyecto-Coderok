@@ -1,0 +1,233 @@
+@use "variables";
+@use "mixins";
+
+.promo {
+  background-color: #ebc67c;
+  padding: 30px;
+  border-top: 1px solid #ddd;
+  @include mixins.animar-aparecer(1.2s);
+}
+
+.Pagina-Completa {
+  display: grid;
+  grid-template-areas:
+    "espacio1"
+    "espacio2"
+    "espacio3";
+  min-height: 100vh;
+}
+
+header {
+  grid-area: espacio1;
+  background-color: variables.$color-primary;
+}
+
+main {
+  grid-area: espacio2;
+}
+
+footer {
+  grid-area: espacio3;
+  background-color: variables.$color-footer;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  color: #666;
+  margin-top: 60px;
+  border-top: 2px solid #d6cfc2;
+  margin-bottom: auto;
+}
+.foto-ig {
+  width: 15px;
+}
+
+.foto-oulook {
+  width: 15px;
+}
+
+.inicio,
+.fundador,
+.fundador1,
+.texto-inicio {
+  font-family: variables.$font-secondary;
+  padding: variables.$spacing-default;
+  font-size: 25px;
+}
+
+.TITULOPRINCIPAL {
+  font-family: "Times New Roman", Times, serif;
+  background-color: variables.$color-background;
+  color: variables.$color-highlight;
+}
+
+.fotoprincipal {
+  width: 400px;
+  height: 300px;
+  padding: variables.$spacing-default;
+}
+
+.Elcomienzo1,
+.crecimiento1,
+.dosdecadas {
+  font-family: variables.$font-main;
+  font-size: 45px;
+  text-align: left;
+  letter-spacing: 2px;
+  padding: 30px 15px;
+}
+
+.Texto1,
+.desarrollo1,
+.text-dosdecadas {
+  font-size: 20px;
+  color: black;
+  padding: variables.$spacing-default;
+}
+
+.comedor {
+  max-width: 100%;
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in-out;
+  padding: 20px;
+}
+
+.menuprincipal {
+  font-size: 40px;
+  color: variables.$color-menu;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid variables.$color-border;
+  padding-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
+}
+
+.lista {
+  max-width: 900px;
+  margin: auto;
+  list-style-type: none;
+
+  li {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: variables.$radius;
+    background: #fff;
+    box-shadow: variables.$shadow;
+  }
+
+  h2 {
+    font-size: 22px;
+    color: variables.$color-menu;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+}
+
+.list {
+  grid: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.comida1,
+.comida3 {
+  width: 100%;
+  max-width: 100%;
+  border-radius: variables.$radius;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.card-body {
+  i {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover i {
+    transform: scale(1.2);
+  }
+}
+
+.promo {
+  background-color: #ebc67c;
+  padding: 30px;
+  border-top: 1px solid #ddd;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 15px;
+      font-size: 17px;
+      position: relative;
+      padding-left: 20px;
+    }
+  }
+}
+
+.membresiavip {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f4e9dc;
+  border-bottom: 2px solid variables.$color-border;
+
+  h1,
+  p {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: variables.$color-menu;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+  }
+}
+
+.formulario-membresia {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+}
+
+.elemento-formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  label {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: medium;
+    padding: variables.$spacing-default;
+  }
+
+  input {
+    padding: variables.$spacing-default;
+    border-color: #ebc67c;
+    font-size: 1rem;
+  }
+}

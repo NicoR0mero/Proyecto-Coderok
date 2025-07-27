@@ -1,0 +1,23 @@
+@use "variables";
+@use "mixins";
+
+* {
+  @include mixins.reset;
+}
+
+body {
+  background-color: variables.$color-primary !important;
+  font-family: variables.$font-main;
+  color: variables.$color-text;
+  line-height: 1.6;
+}
+
+h1 {
+  color: gold;
+  font-size: 50px;
+  text-align: center;
+}
+
+section {
+  background-color: transparent;
+}

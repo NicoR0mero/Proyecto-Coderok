@@ -1,0 +1,252 @@
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d69846 !important;
+  font-family: "Playfair Display", serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  color: gold;
+  font-size: 50px;
+  text-align: center;
+}
+
+section {
+  background-color: transparent;
+}
+
+.promo {
+  background-color: #ebc67c;
+  padding: 30px;
+  border-top: 1px solid #ddd;
+  animation: aparecer 1.2s ease-out both;
+}
+
+.Pagina-Completa {
+  display: grid;
+  grid-template-areas: "espacio1" "espacio2" "espacio3";
+  min-height: 100vh;
+}
+
+header {
+  grid-area: espacio1;
+  background-color: #d69846;
+}
+
+main {
+  grid-area: espacio2;
+}
+
+footer {
+  grid-area: espacio3;
+  background-color: #e8e4d9;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  color: #666;
+  margin-top: 60px;
+  border-top: 2px solid #d6cfc2;
+  margin-bottom: auto;
+}
+
+.foto-ig {
+  width: 15px;
+}
+
+.foto-oulook {
+  width: 15px;
+}
+
+.inicio,
+.fundador,
+.fundador1,
+.texto-inicio {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.TITULOPRINCIPAL {
+  font-family: "Times New Roman", Times, serif;
+  background-color: wheat;
+  color: burlywood;
+}
+
+.fotoprincipal {
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+}
+
+.Elcomienzo1,
+.crecimiento1,
+.dosdecadas {
+  font-family: "Playfair Display", serif;
+  font-size: 45px;
+  text-align: left;
+  letter-spacing: 2px;
+  padding: 30px 15px;
+}
+
+.Texto1,
+.desarrollo1,
+.text-dosdecadas {
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+}
+
+.comedor {
+  max-width: 100%;
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in-out;
+  padding: 20px;
+}
+
+.menuprincipal {
+  font-size: 40px;
+  color: #8b5e3c;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #c1a57b;
+  padding-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .menuprincipal {
+    font-size: 26px;
+  }
+}
+
+.lista {
+  max-width: 900px;
+  margin: auto;
+  list-style-type: none;
+}
+.lista li {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.lista h2 {
+  font-size: 22px;
+  color: #8b5e3c;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .lista h2 {
+    font-size: 18px;
+  }
+}
+.lista p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.list {
+  grid: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.comida1,
+.comida3 {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+.comida1:hover,
+.comida3:hover {
+  transform: scale(1.03);
+}
+
+.card-body i {
+  transition: transform 0.3s ease;
+}
+.card-body:hover i {
+  transform: scale(1.2);
+}
+
+.promo {
+  background-color: #ebc67c;
+  padding: 30px;
+  border-top: 1px solid #ddd;
+}
+.promo ul {
+  list-style: none;
+  padding: 0;
+}
+.promo ul li {
+  margin-bottom: 15px;
+  font-size: 17px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.membresiavip {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f4e9dc;
+  border-bottom: 2px solid #c1a57b;
+}
+.membresiavip h1,
+.membresiavip p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #8b5e3c;
+}
+.membresiavip h1 {
+  font-size: 32px;
+}
+.membresiavip p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.formulario-membresia {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+}
+
+.elemento-formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.elemento-formulario label {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: medium;
+  padding: 10px;
+}
+.elemento-formulario input {
+  padding: 10px;
+  border-color: #ebc67c;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
